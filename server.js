@@ -9,12 +9,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Enable CORS
-app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "http://frontend-quotes.mcp.ikt-fag.no:4000"
-  ]
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:4000",
+      "http://frontend-quotes.mcp.ikt-fag.no:4000",
+    ],
+
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  }),
+);
 
 // MongoDB Connection
 const mongoURI = process.env.MONGO_URI;
