@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "http://frontend-quotes.mcp.ikt-fag.no"
+    "http://frontend-quotes.mcp.ikt-fag.no:4000"
   ]
 }));
 
