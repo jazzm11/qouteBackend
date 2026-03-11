@@ -22,9 +22,9 @@ app.use(
 );
 
 // MongoDB Connection
-const mongoURI = process.env.MONGO_URI;
+const mongoURL = process.env.MONGO_URL;
 const connectDB = require("./config/db");
-connectDB(mongoURI);
+connectDB(mongoURL);
 
 // Route Imports
 const quoteRoutes = require("./router/quoteRouter");
